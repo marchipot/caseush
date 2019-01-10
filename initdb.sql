@@ -28,11 +28,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `users`
---
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'marchi', 'danielmarchi.tech@gmail.com', '123456'),
-(4, 'haim', 'kim@gmail.com', '123456');
-COMMIT;
+CREATE USER 'case'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON * . * TO 'case'@'localhost';
+FLUSH PRIVILEGES;
