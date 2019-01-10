@@ -38,7 +38,7 @@
        
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img class="logo" src="images/logo0.png" width=50px; height=35px>
+        <img class="logo" src="../images/logo0.png" width=50px; height=35px>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a href="index.php">אודות</a></li>
