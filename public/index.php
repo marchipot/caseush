@@ -5,7 +5,7 @@
     <!-- <div class="header"> -->
    
     <!-- </div> -->
-    <h1>מעקב התיישנויות תייקים עבור משרדי עורכי דין</h1>
+    <h1>מעקב התיישנויות תיקים עבור משרדי עורכי דין</h1>
     <!-- <div class="container row fullwidth"> -->
     <ul class="cards">
   
