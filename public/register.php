@@ -40,9 +40,9 @@ if ($result === true) {
 
     <!-- <form action="" method="post"> -->
     
-    <div class="jubmotron">
+    <div class="jumbotron">
         <h4 class="logIn">הרשמה</h4>
-        <form  class="logIn" action="login_process.php" method="post">
+        <form  class="logIn" action="register.php" method="post">
             <div class="form-group">
                 <label for="exampleInputUsername1">שם משתמש</label>
                 <input type="text" name="username" class="form-control" id="exampleInputUsername1" placeholder="username">
