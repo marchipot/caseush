@@ -40,7 +40,7 @@ if ($result === true) {
 
     <!-- <form action="" method="post"> -->
     
-    <div class="jubmotron">
+    <div class="jumbotron">
         <h4 class="logIn">הרשמה</h4>
         <form  class="logIn" action="login_process.php" method="post">
             <div class="form-group">
