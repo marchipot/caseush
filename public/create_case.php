@@ -7,12 +7,7 @@ if (!isset($_SESSION['userid'])) {
 $user_id = $_SESSION['userid'];
 echo $user_id;
 if(is_post_request()){
-$case = $_POST['customer_name'];
-$case = $_POST['case_number'];
-$case = $_POST['start_date'];
-$case = $_POST['end_date'];
-$case = $_POST['title'];
-$case = $_POST['is_open'];
+
 $case = [];
 $case['user_id'] = $user_id ?? '';
 $case['customer_name'] = $_POST['customer_name'] ?? '';
@@ -22,7 +17,10 @@ $case['end_date'] = $_POST['end_date'] ?? '';
 $case['title'] = $_POST['title'] ?? '';
 $case['is_open'] = $_POST['is_open'] ?? '';
 
-insert_case($case);
+$result = insert_case($case);
+if($result){
+    redirect_to(url_for('/caselist.php'));
+}
 
 }
 ?>

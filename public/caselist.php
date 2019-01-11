@@ -70,5 +70,5 @@ $case_set = find_all_cases($user_id);
   </div>
 
 </div>
-<a href="<?php echo url_for('./create_case.php'); ?>"><button class="btn btn-succsess">הוספה</button></a>
+<a href="<?php echo url_for('/create_case.php'); ?>"><button class="btn btn-success"><i class="fas fa-plus"></i></button></a>
 <?php include(SHARED_PATH . '/staff_footer.php'); ?>

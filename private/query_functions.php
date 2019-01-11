@@ -351,7 +351,7 @@ function insert_case($case)
   global $db;
   $user_id = $case['user_id'];
   $sql = "INSERT INTO cases " ;
-  $sql .= "(user_id, customer_name, case_number,start_date,end_date,title,is_open) ";
+  $sql .= "(user_id, customer_name, case_number,start_date,end_date,title,is_open,is_archived) ";
   $sql .= "VALUES (";
   $sql .= "'" . db_escape($db, $case['user_id']) . "',";
   $sql .= "'" . db_escape($db, $case['customer_name']) . "',";
@@ -359,7 +359,8 @@ function insert_case($case)
   $sql .= "'" . db_escape($db, $case['start_date']) . "',";
   $sql .= "'" . db_escape($db, $case['end_date']) . "',";
   $sql .= "'" . db_escape($db, $case['title']) . "',";
-  $sql .= "'" . db_escape($db, $case['is_open']) . "'";
+  $sql .= "'" . db_escape($db, $case['is_open']) . "',";
+  $sql .= "'0'";
   $sql .= ")";
   echo $sql;
   $result = mysqli_query($db, $sql);
