@@ -52,9 +52,9 @@ $case_set = find_all_cases($user_id);
           <td><?php echo h($case['start_date']); ?></td>
           <td><?php echo h($case['end_date']); ?></td>
           <td><?php echo h($case['title']); ?></td>
-          <td><?php echo $case['is_open'] == 1 ? 'true' : 'false'; ?></td>
-          <td><a class="action" href="<?php echo url_for("edit_case.php?id=" . h(u($case['id']))); ?>">Edit</a></td>
-          <td><a class="action" href="<?php echo url_for("archive_case.php?id=" . h(u($case['id']))); ?>">Delete</a></td>
+          <td><?php echo $case['is_open'] == 1 ? 'פתוח' : 'סגור'; ?></td>
+          <td><a class="action" href="<?php echo url_for("edit_case.php?id=" . h(u($case['id']))); ?>"><i class="far fa-edit"></i></a></td>
+          <td><a class="action" href="<?php echo url_for("archive_case.php?id=" . h(u($case['id']))); ?>"><i class="fas fa-trash"></i></a></td>
 
                 </tr>
                 <?php 
