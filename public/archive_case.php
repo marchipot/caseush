@@ -25,6 +25,7 @@ if($result === true) {
   }
 }
 ?>
+<div class="jumbotron">
 <form action="" method="post">
 <h1>האם את/ה בטוח?</h1>
 <button class="btn btn-success">yes</button>
@@ -32,6 +33,7 @@ if($result === true) {
 <a href="<?php echo url_for('caselist.php'); ?>" > 
 <button class="btn btn-danger">no</button>
 </a>
+</div>
 
 
 <?php include(SHARED_PATH . '/staff_footer.php'); ?>
