@@ -38,9 +38,24 @@ if ($result === true) {
 
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
-    <form action="" method="post">
-    <input type="text" placeholder="username" name="username">
-    <input type="password" placeholder="password" name="password">
-    <input type="email" placeholder="email" name="email">
-    <button name="create">register</button>
-    </form>
+    <!-- <form action="" method="post"> -->
+    
+    <div class="jubmotron">
+        <h4 class="logIn">הרשמה</h4>
+        <form  class="logIn" action="login_process.php" method="post">
+            <div class="form-group">
+                <label for="exampleInputUsername1">שם משתמש</label>
+                <input type="text" name="username" class="form-control" id="exampleInputUsername1" placeholder="username">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">כתובת אי-מייל</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">אנו לעולם לא נחלוק את האי-מייל שלך עם מישהו אחר</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">סיסמא</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+            </div>
+            <button type="submit" name="create" class="btn btn-primary btn-lg">שלח</button>
+        </form>
+    </div>
