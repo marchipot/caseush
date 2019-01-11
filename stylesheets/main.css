@@ -339,13 +339,13 @@
     max-width: 34em;
     margin: 20% auto 0;
   }
-  
+  img{
+    width:100%;
+  }
   .card {
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    
     background: #ccc;
     border-radius: 30px;
     padding: 40px;
