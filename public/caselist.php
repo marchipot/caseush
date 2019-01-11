@@ -1,10 +1,10 @@
 <?php require_once('../private/initialize.php'); ?>
 <?php
-        $section = "privateArea";
-    ?>
+$section = "privateArea";
+?>
 <?php
 
-if(!isset($_SESSION['userid'])){
+if (!isset($_SESSION['userid'])) {
     redirect_to_login("user not logged in");
 }
 $user_id = $_SESSION['userid'];
@@ -20,7 +20,7 @@ $case_set = find_all_cases($user_id);
     <h1>אזור אישי (תיקים של המשרד שלי)</h1>
 
     
-   <a href="<?php ?>"></a>
+   <a href="<?php  ?>"></a>
 
   	</table>
       <div class="container-fluid">
@@ -42,8 +42,9 @@ $case_set = find_all_cases($user_id);
             </thead>
             <tbody>
               
-      <?php while($case = mysqli_fetch_assoc($case_set)) { ?>
-        
+      <?php while ($case = mysqli_fetch_assoc($case_set)) {
+
+            if (!$case['is_archived']) { ?>
         <tr>
         <td><?php echo h($case['id']); ?></td>
           <td><?php echo h($case['customer_name']); ?></td>
@@ -52,11 +53,14 @@ $case_set = find_all_cases($user_id);
           <td><?php echo h($case['end_date']); ?></td>
           <td><?php echo h($case['title']); ?></td>
           <td><?php echo $case['is_open'] == 1 ? 'true' : 'false'; ?></td>
-          <td><a class="action" href="<?php echo url_for( "edit_case.php?id=" . h(u($case['id']))); ?>">Edit</a></td>
+          <td><a class="action" href="<?php echo url_for("edit_case.php?id=" . h(u($case['id']))); ?>">Edit</a></td>
           <td><a class="action" href="<?php echo url_for("archive_case.php?id=" . h(u($case['id']))); ?>">Delete</a></td>
 
                 </tr>
-            <?php } ?>
+                <?php 
+            } ?>
+            <?php 
+        } ?>
             </tbody>
             </table>
         </div>
@@ -66,5 +70,5 @@ $case_set = find_all_cases($user_id);
   </div>
 
 </div>
-
+<a href="<?php echo url_for('./create_case.php'); ?>"><button class="btn btn-succsess">הוספה</button></a>
 <?php include(SHARED_PATH . '/staff_footer.php'); ?>
