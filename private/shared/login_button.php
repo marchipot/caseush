@@ -7,6 +7,7 @@ if (!is_logged_in()) {
 
 } else {
     ?>
+<li><a href="<?php echo url_for('/caselist.php') ?>">איזור ניהול תיקים</a></li>
 <li><a href="<?php echo url_for('logout.php') ?>">התנתק</a></li>
 <?php
 

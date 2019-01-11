@@ -30,7 +30,7 @@
     <!-- Navbar Links -->
     <ul id="menu">
       <li><a href="<?php echo url_for('/index.php') ?>">בית</a></li><!--
-   --><li><a href="<?php echo url_for('/caselist.php') ?>">איזור ניהול תיקים</a></li><!--
+   --><!--
 --> <?php include(SHARED_PATH . '/login_button.php'); ?>
     </ul>
   </div>
