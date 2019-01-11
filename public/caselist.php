@@ -17,14 +17,18 @@ $case_set = find_all_cases($user_id);
 
 <div id="content">
   <div class="pages listing">
-    <h1>אזור אישי (תיקים של המשרד שלי)</h1>
-
-    
-   <a href="<?php  ?>"></a>
-
-  	</table>
-      <div class="container-fluid">
+      
+      
+      <a href="<?php  ?>"></a>
+      
+    </table>
+    <div class="container-fluid">
         <div class="jumbotron">
+                  <div class="page-header">
+                      
+                      <h1>אזור אישי (תיקים של המשרד שלי)</h1>
+                      <a href="<?php echo url_for('/create_case.php'); ?>"><button class="btn" title="הוסף"><i class="fas fa-plus"></i></button></a>
+                    </div>
             <table class="table">
             <thead class="thead-light">
                 <tr>
@@ -70,5 +74,4 @@ $case_set = find_all_cases($user_id);
   </div>
 
 </div>
-<a href="<?php echo url_for('/create_case.php'); ?>"><button class="btn btn-success"><i class="fas fa-plus"></i></button></a>
 <?php include(SHARED_PATH . '/staff_footer.php'); ?>
