@@ -11,47 +11,52 @@
     <!--Link to bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Link to my CSS-->
+    <link rel="stylesheet" media="all" href="<?php echo url_for('../stylesheets/main.css'); ?>" />
     <link rel="stylesheet" media="all" href="<?php echo url_for('../stylesheets/style.css'); ?>" />
-<?php
 
-
-    if(isset($_GET['cat'])){
-    if($_GET['cat'] == 'about'){
-     $pageTitle = "about";
-     }
-    else if ($_GET['cat'] == 'openingFile'){
-     $pageTitle ="openingFile";
-     }
-    else if ($_GET['cat'] == 'privateArea'){
-     $pageTitle = "privateArea";
-     }
-    }
-?>
-     <title><?php echo $pageTitle;?></title>
-    
 </head>
 <body>
-<div class="header">
-    <div class="row">
-        <h1 class="Pname col-8">מעקב התיישנות תיקים עבור משרדי עורכי דין</h1>
-       <?php include(SHARED_PATH . '/login_button.php'); ?>
-       
+
+<navigation>
+
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+      <!-- Logo Placeholder for Inlustration -->
+      <a href="#home"><i class="fas fa-chess-knight"></i>Caseing</a>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img class="logo" src="images/logo0.png" width=50px; height=35px>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a href="index.php">אודות</a></li>
-                <li class="nav-item <?php if(isset($section) && $section == 'openingFile'){echo 'on';}?>"><a href="./openingFile.php?cat=openingFile">פתיחת תיק</a></li>
-                <li class="nav-item <?php if(isset($section) && $section == 'privateArea'){echo 'on';}?>"><a href="./privateArea.php?cat=privateArea">אזור אישי (תיקים של המשרד שלי)</a></li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" hidden>
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="<?php echo url_for('/index.php') ?>">בית</a></li><!--
+   --><li><a href="<?php echo url_for('/caselist.php') ?>">איזור ניהול תיקים</a></li><!--
+--> <?php include(SHARED_PATH . '/login_button.php'); ?>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Menu Icon -->
+<div class="menuIcon">
+  <span class="icon icon-bars"></span>
+  <span class="icon icon-bars overlay"></span>
 </div>
+
+
+<div class="overlay-menu">
+  <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+</navigation>
+
+
+
     
 
 

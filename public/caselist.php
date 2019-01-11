@@ -17,10 +17,11 @@ $case_set = find_all_cases($user_id);
 
 <div id="content">
   <div class="pages listing">
-    <h1>cases</h1>
+    <h1>אזור אישי (תיקים של המשרד שלי)</h1>
 
     
-   
+   <a href="<?php ?>"></a>
+
   	</table>
       <div class="container-fluid">
         <div class="jumbotron">
@@ -30,10 +31,13 @@ $case_set = find_all_cases($user_id);
                     <th scope="col">#</th>
                     <th scope="col">שם הלקוח</th> 
                     <th scope="col">מספר תיק משרדי</th>
-                    <th scope="col">עילת התביעה</th>
                     <th scope="col">תאריך קרות האירוע</th> 
                     <th scope="col">תאריך התיישנות</th> 
+                    <th scope="col">עילת התביעה</th>
                     <th scope="col">מצב תיק</th>
+                    <th scope="col">עריכה</th>
+                    <th scope="col">למחוק</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -45,10 +49,12 @@ $case_set = find_all_cases($user_id);
           <td><?php echo h($case['customer_name']); ?></td>
           <td><?php echo h($case['case_number']); ?></td>
           <td><?php echo h($case['start_date']); ?></td>
-          <td><?php echo h($case['end_date	']); ?></td>
+          <td><?php echo h($case['end_date']); ?></td>
           <td><?php echo h($case['title']); ?></td>
           <td><?php echo $case['is_open'] == 1 ? 'true' : 'false'; ?></td>
-    	    <td><?php echo h($page['menu_name']); ?></td>
+          <td><a class="action" href="<?php echo url_for( "edit_case.php?id=" . h(u($case['id']))); ?>">Edit</a></td>
+          <td><a class="action" href="<?php echo url_for("archive_case.php?id=" . h(u($case['id']))); ?>">Delete</a></td>
+
                 </tr>
             <?php } ?>
             </tbody>
