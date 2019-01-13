@@ -4,7 +4,7 @@ $page_title="login";
 ?>
 
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
-<div class="jumbotron">
+<div class="jumbotron logjumb">
     <h4 class="logIn">התחברות</h4>
         <form  class="logIn" action="login_process.php" method="post">
             <div class="form-group">
