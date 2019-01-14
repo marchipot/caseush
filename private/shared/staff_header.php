@@ -13,43 +13,24 @@
     <!-- Link to my CSS-->
     <link rel="stylesheet" media="all" href="<?php echo url_for('../stylesheets/main.css'); ?>" />
     <link rel="stylesheet" media="all" href="<?php echo url_for('../stylesheets/style.css'); ?>" />
+    <link rel="stylesheet" href="<?php echo url_for('../stylesheets/style.css'); ?>">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="<?php echo url_for('/vendor/animate/animate.css'); ?>">
+  <link rel="stylesheet" href="<?php echo url_for('/assets/css/style.css'); ?>">
 
-</head>
-<body>
-
-
-
-<navigation>
-
-<nav id="navbar" class="">
-  <div class="nav-wrapper">
-    <!-- Navbar Logo -->
-    <div class="logo">
-      <!-- Logo Placeholder for Inlustration -->
-      <a href="#home"><i class="fas fa-chess-knight"></i>Caseing</a>
-    </div>
-
-    <!-- Navbar Links -->
-    <ul id="menu">
-      <li><a href="<?php echo url_for('/index.php') ?>">בית</a></li><!--
-   --><!--
---> <?php include(SHARED_PATH . '/login_button.php'); ?>
-    </ul>
-  </div>
-</nav>
-
-
-<!-- Menu Icon -->
-<div class="menuIcon">
-  <span class="icon icon-bars"></span>
-  <span class="icon icon-bars overlay"></span>
-</div>
-
-</navigation>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script src="<?php echo url_for('/js/js.js') ?>"></script>
 
 
 
     
+</html>
 
-
-
+</head>
+<body>
+  

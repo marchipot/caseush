@@ -54,6 +54,7 @@ function find_all_cases($user_id)
     //echo $sql;
   $result = mysqli_query($db, $sql);
   confirm_result_set($result);
+  $json= json_encode($result);
   return $result;
 }
 
