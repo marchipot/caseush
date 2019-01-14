@@ -45,7 +45,7 @@
 			<ul>
         <li class="selected"><a href="index.php" title="">אודות</a></li>
         <li class="selected <?php if($section == 'caselist'){echo 'on';}?>"><a href="./caselist.php?cat=caseList">אזור ניהול תיקים</a></li>
-        <li class="selected"><button class="btn" >התחברות</button></li>
+        <li class="selected"><button class="btn">התחברות</button></li>
         <li class="selected"><button class="btn">רישום</button></li>
 				<!-- <li class="current"><a href="index.html" >אודות</a></li> -->
 			</ul>	
