@@ -16,12 +16,7 @@ $case_set = find_all_cases($user_id);
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
 <div id="content">
-<?php 
-if (class_exists('Swift')) {
-    echo 'Good to go';
-} else {
-    echo 'We have a problem';
-} ?>
+
   <div class="pages listing">
       
       

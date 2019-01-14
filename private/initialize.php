@@ -21,42 +21,12 @@ $doc_root = substr($_SERVER['SCRIPT_NAME'], 0, $public_end);
 define("WWW_ROOT", $doc_root);
 
 
-
-/*
- * $loader needs to be a relative path to an autoloader script.
- * Swift Mailer's autoloader is swift_required.php in the lib directory.
- * If you used Composer to install Swift Mailer, use vendor/autoload.php.
- */
-$loader = __DIR__ . '/../vendor/swiftmailer/swiftmailer/lib/swift_required.php';
-
-require_once $loader;
-
-/*
- * Login details for mail server
- */
-$smtp_server = '';
-$username = '';
-$password = '';
-
-/*
- * Email addresses for testing
- * The first two are associative arrays in the format
- * ['email_address' => 'name']. The rest contain just
- * an email address as a string.
- */
-$from = [];
-$test1 = [];
-$testing = '';
-$test2 = '';
-$test3 = '';
-$secret = '';
-$private = '';
-
-
-require_once('functions.php');
+npm install nodemailer --saverequire_once('functions.php');
 require_once('database.php');
 require_once('query_functions.php');
 require_once('validation_functions.php');
+
+
 
 $db = db_connect();
 $errors = [];
