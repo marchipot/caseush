@@ -25,7 +25,7 @@
  
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
 <script src="<?php echo url_for('/js/js.js') ?>"></script>
-
+<script src="<?php echo url_for('/js/sticky navbar.js')?>"></script>
 
 
     
@@ -33,4 +33,21 @@
 
 </head>
 <body>
+<div class="header">
+    <div class="row my-2 my-lg-0">
+    <h4 class="webT mr-sm-2">CasInq  <img src="../images/logo0.png" width=45px; height=35px></h4>
+    <div class="col"></div>
+    <h4 class="tit my-2 my-sm-0">מעקב התיישנות תיקים</h4> 
+    </div> 
+
+
+		<nav class="navigation">
+			<ul>
+        <li class="selected"><a href="index.php" title="">אודות</a></li>
+        <li class="selected <?php if($section == 'caselist'){echo 'on';}?>"><a href="./caselist.php?cat=caseList">אזור ניהול תיקים</a></li>
+        <li class="selected"><button class="btn" >התחברות</button></li>
+        <li class="selected"><button class="btn">רישום</button></li>
+				<!-- <li class="current"><a href="index.html" >אודות</a></li> -->
+			</ul>	
+</div>
   

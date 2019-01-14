@@ -1,7 +1,11 @@
 body{
-  direction: rtl;
+    text-align: right;
+    direction: rtl;
+    text-align: center;
+    background: rgba(255,255,255,.1);
+    transition: color .2s ease;
+	font-family: "Times New Roman", Times, serif;
 }
-
 
   .red{
     background-color: red;
@@ -165,3 +169,4 @@ body{
   margin: auto;
   margin-top:3em;
 }
+
