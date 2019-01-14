@@ -1,6 +1,6 @@
 <?php require_once('../private/initialize.php'); ?>
 <?php
-$section = "privateArea";
+$section = "caselist";
 ?>
 <?php
 
@@ -11,7 +11,7 @@ $user_id = $_SESSION['userid'];
 $case_set = find_all_cases($user_id);
 ?>
 
-<?php $page_title = 'case list'; ?>
+<?php $page_title = 'caseList'; ?>
 
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
