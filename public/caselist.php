@@ -16,6 +16,12 @@ $case_set = find_all_cases($user_id);
 <?php include(SHARED_PATH . '/staff_header.php'); ?>
 
 <div id="content">
+<?php 
+if (class_exists('Swift')) {
+    echo 'Good to go';
+} else {
+    echo 'We have a problem';
+} ?>
   <div class="pages listing">
       
       
@@ -86,7 +92,7 @@ $case_set = find_all_cases($user_id);
           <td><a class="action" href="<?php echo url_for("edit_case.php?id=" . h(u($case['id']))); ?>"><i class="far fa-edit"></i></a></td>
           <td><a class="action" href="<?php echo url_for("archive_case.php?id=" . h(u($case['id']))); ?>"><i class="fas fa-trash"></i></a></td>
           <td><a class="action" href="<?php echo url_for("archive_case.php?id=" . h(u($case['id']))); ?>"><i class="far fa-envelope"></i></a></td>
-
+                
                 </tr>
                 <?php 
             } ?>
